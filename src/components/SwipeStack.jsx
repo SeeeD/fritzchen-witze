@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import JokeCard from './JokeCard';
 
 const GRADIENTS = [
@@ -24,6 +25,24 @@ function padId(id) {
   return String(id).padStart(4, '0');
 }
 
+function BgCard({ joke, colors }) {
+  return (
+    <div
+      className="joke-card"
+      style={{
+        background: `linear-gradient(145deg, ${colors[0]}, ${colors[1]})`,
+        transform: 'scale(0.93) translateY(16px)',
+      }}
+    >
+      <div className="joke-id">#{padId(joke.id)}</div>
+      <div className="joke-content">
+        <div className="joke-face">😂</div>
+        <p className="joke-text">{joke.text}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function SwipeStack({ jokes }) {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -31,11 +50,20 @@ export default function SwipeStack({ jokes }) {
   const initialIndex = Math.max(0, jokes.findIndex(j => j.id === parseInt(id, 10)));
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
+  // Geteilter x-Wert der oberen Karte – steuert welche Hintergrundkarte sichtbar ist
+  const topX = useMotionValue(0);
+
+  // Nächste Karte: sichtbar by default, blendet aus wenn nach rechts gezogen wird
+  const nextBgOpacity = useTransform(topX, [0, 80], [1, 0]);
+  // Vorherige Karte: blendet ein wenn nach rechts gezogen wird
+  const prevBgOpacity = useTransform(topX, [0, 80], [0, 1]);
+
   const total = jokes.length;
   const canGoLeft = currentIndex < total - 1;
   const canGoRight = currentIndex > 0;
 
   const goTo = (index) => {
+    topX.set(0); // synchron zurücksetzen bevor neue Karte rendert
     setCurrentIndex(index);
     const joke = jokes[index];
     navigate(`/${padId(joke.id)}/${joke.slug}`, { replace: true });
@@ -52,23 +80,32 @@ export default function SwipeStack({ jokes }) {
       <div className="progress-label">{currentIndex + 1} / {total}</div>
 
       <div className="cards-area">
-        {currentIndex + 1 < total && (
-          <JokeCard
-            key={currentIndex + 1}
-            joke={jokes[currentIndex + 1]}
-            isTop={false}
-            colors={GRADIENTS[(currentIndex + 1) % GRADIENTS.length]}
-            onSwipeLeft={goNext}
-            onSwipeRight={goPrev}
-            canGoLeft={canGoLeft}
-            canGoRight={canGoRight}
-          />
+        {/* Vorheriger Witz – erscheint beim Rechts-Wischen */}
+        {canGoRight && (
+          <motion.div className="bg-card-wrapper" style={{ opacity: prevBgOpacity, zIndex: 4 }}>
+            <BgCard
+              joke={jokes[currentIndex - 1]}
+              colors={GRADIENTS[(currentIndex - 1) % GRADIENTS.length]}
+            />
+          </motion.div>
         )}
+
+        {/* Nächster Witz – sichtbar by default, verschwindet beim Rechts-Wischen */}
+        {canGoLeft && (
+          <motion.div className="bg-card-wrapper" style={{ opacity: nextBgOpacity, zIndex: 5 }}>
+            <BgCard
+              joke={jokes[currentIndex + 1]}
+              colors={GRADIENTS[(currentIndex + 1) % GRADIENTS.length]}
+            />
+          </motion.div>
+        )}
+
+        {/* Aktuelle Karte */}
         <JokeCard
           key={currentIndex}
           joke={jokes[currentIndex]}
-          isTop={true}
           colors={GRADIENTS[currentIndex % GRADIENTS.length]}
+          sharedX={topX}
           onSwipeLeft={goNext}
           onSwipeRight={goPrev}
           canGoLeft={canGoLeft}

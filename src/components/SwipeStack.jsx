@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import JokeCard from './JokeCard';
 
 const GRADIENTS = [
@@ -21,61 +21,42 @@ const GRADIENTS = [
 
 export default function SwipeStack({ jokes }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const directionRef = useRef(0);
-  const [cardKey, setCardKey] = useState(0);
 
   const total = jokes.length;
   const canGoLeft = currentIndex < total - 1;
   const canGoRight = currentIndex > 0;
 
-  const goNext = () => {
-    if (!canGoLeft) return;
-    directionRef.current = 1;
-    setCurrentIndex(i => i + 1);
-    setCardKey(k => k + 1);
-  };
-
-  const goPrev = () => {
-    if (!canGoRight) return;
-    directionRef.current = -1;
-    setCurrentIndex(i => i - 1);
-    setCardKey(k => k + 1);
-  };
-
-  const ghostColors1 = GRADIENTS[(currentIndex + 1) % GRADIENTS.length];
-  const ghostColors2 = GRADIENTS[(currentIndex + 2) % GRADIENTS.length];
+  const goNext = () => { if (canGoLeft) setCurrentIndex(i => i + 1); };
+  const goPrev = () => { if (canGoRight) setCurrentIndex(i => i - 1); };
 
   return (
     <div className="swipe-stack">
-      {/* Progress */}
       <div className="progress-bar">
-        <div
-          className="progress-fill"
-          style={{ width: `${((currentIndex + 1) / total) * 100}%` }}
-        />
+        <div className="progress-fill" style={{ width: `${((currentIndex + 1) / total) * 100}%` }} />
       </div>
-      <div className="progress-label">
-        {currentIndex + 1} / {total}
-      </div>
+      <div className="progress-label">{currentIndex + 1} / {total}</div>
 
-      {/* Card stack */}
       <div className="cards-area">
-        {/* Decorative ghost cards */}
-        <div
-          className="ghost-card ghost-back"
-          style={{ background: `linear-gradient(145deg, ${ghostColors2[0]}, ${ghostColors2[1]})` }}
-        />
-        <div
-          className="ghost-card ghost-front"
-          style={{ background: `linear-gradient(145deg, ${ghostColors1[0]}, ${ghostColors1[1]})` }}
-        />
+        {/* Hintere Karte – nächster Witz, liegt direkt dahinter */}
+        {currentIndex + 1 < total && (
+          <JokeCard
+            key={currentIndex + 1}
+            joke={jokes[currentIndex + 1]}
+            isTop={false}
+            colors={GRADIENTS[(currentIndex + 1) % GRADIENTS.length]}
+            onSwipeLeft={goNext}
+            onSwipeRight={goPrev}
+            canGoLeft={canGoLeft}
+            canGoRight={canGoRight}
+          />
+        )}
 
-        {/* Active card */}
+        {/* Vordere Karte – aktueller Witz, swipebar */}
         <JokeCard
-          key={cardKey}
+          key={currentIndex}
           joke={jokes[currentIndex]}
+          isTop={true}
           colors={GRADIENTS[currentIndex % GRADIENTS.length]}
-          enterDirection={directionRef.current}
           onSwipeLeft={goNext}
           onSwipeRight={goPrev}
           canGoLeft={canGoLeft}
@@ -83,25 +64,10 @@ export default function SwipeStack({ jokes }) {
         />
       </div>
 
-      {/* Navigation buttons */}
       <div className="nav-buttons">
-        <button
-          className="nav-btn"
-          onClick={goPrev}
-          disabled={!canGoRight}
-          aria-label="Vorheriger Witz"
-        >
-          ←
-        </button>
+        <button className="nav-btn" onClick={goPrev} disabled={!canGoRight} aria-label="Vorheriger Witz">←</button>
         <span className="swipe-hint">← Wischen →</span>
-        <button
-          className="nav-btn"
-          onClick={goNext}
-          disabled={!canGoLeft}
-          aria-label="Nächster Witz"
-        >
-          →
-        </button>
+        <button className="nav-btn" onClick={goNext} disabled={!canGoLeft} aria-label="Nächster Witz">→</button>
       </div>
     </div>
   );

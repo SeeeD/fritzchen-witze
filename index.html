@@ -13,8 +13,10 @@
           var decoded = l.search.slice(1).split('&').map(function(s) {
             return s.replace(/~and~/g, '&');
           });
+          // l.pathname ist z.B. "/fritzchen-witze/" – als Basis voranstellen
+          var base = l.pathname.replace(/\/$/, '');
           window.history.replaceState(null, null,
-            decoded[0] + (decoded[1] ? '?' + decoded[1] : '') + l.hash
+            base + decoded[0] + (decoded[1] ? '?' + decoded[1] : '') + l.hash
           );
         }
       }(window.location));

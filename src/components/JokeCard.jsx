@@ -34,40 +34,46 @@ export default function JokeCard({ joke, colors, enterDirection, onSwipeLeft, on
     }
   };
 
-  return (
-    <motion.div
-      className="joke-card"
-      initial={{ x: enterDirection === 1 ? '110%' : enterDirection === -1 ? '-110%' : 0, opacity: 0, scale: 0.92 }}
-      animate={{ x: 0, opacity: 1, scale: 1 }}
-      transition={{ type: 'spring', stiffness: 280, damping: 28, opacity: { duration: 0.2 } }}
-      style={{
-        x,
-        rotate,
-        background: `linear-gradient(145deg, ${colors[0]}, ${colors[1]})`,
-        touchAction: 'none',
-        cursor: 'grab',
-      }}
-      drag="x"
-      dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-      dragElastic={0.85}
-      onDragEnd={handleDragEnd}
-      whileTap={{ cursor: 'grabbing', scale: 1.02 }}
-    >
-      {/* Swipe indicators */}
-      <motion.div className="swipe-indicator indicator-left" style={{ opacity: leftOpacity }}>
-        <span>Weiter</span>
-        <span className="indicator-arrow">→</span>
-      </motion.div>
-      <motion.div className="swipe-indicator indicator-right" style={{ opacity: rightOpacity }}>
-        <span className="indicator-arrow">←</span>
-        <span>Zurück</span>
-      </motion.div>
+  const entryX = enterDirection === 1 ? 500 : enterDirection === -1 ? -500 : 0;
 
-      {/* Card content */}
-      <div className="joke-content">
-        <div className="joke-face">😂</div>
-        <p className="joke-text">{joke.text}</p>
-      </div>
+  return (
+    // Wrapper: nur für die Slide-in-Animation zuständig (kein x-MotionValue hier)
+    <motion.div
+      className="card-entry-wrapper"
+      initial={{ x: entryX, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 30, opacity: { duration: 0.15 } }}
+    >
+      {/* Inneres div: zuständig für Drag */}
+      <motion.div
+        className="joke-card"
+        style={{
+          x,
+          rotate,
+          background: `linear-gradient(145deg, ${colors[0]}, ${colors[1]})`,
+          touchAction: 'none',
+          cursor: 'grab',
+        }}
+        drag="x"
+        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragElastic={0.85}
+        onDragEnd={handleDragEnd}
+        whileTap={{ cursor: 'grabbing', scale: 1.02 }}
+      >
+        <motion.div className="swipe-indicator indicator-left" style={{ opacity: leftOpacity }}>
+          <span>Weiter</span>
+          <span className="indicator-arrow">→</span>
+        </motion.div>
+        <motion.div className="swipe-indicator indicator-right" style={{ opacity: rightOpacity }}>
+          <span className="indicator-arrow">←</span>
+          <span>Zurück</span>
+        </motion.div>
+
+        <div className="joke-content">
+          <div className="joke-face">😂</div>
+          <p className="joke-text">{joke.text}</p>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }

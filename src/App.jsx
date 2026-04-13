@@ -1,12 +1,23 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import SwipeStack from './components/SwipeStack';
-import jokes from './data/jokes.json';
+import jokesData from './data/jokes.json';
 import './App.css';
 
 function padId(id) {
   return String(id).padStart(4, '0');
 }
 
+function shuffle(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Einmalig beim Seitenload mischen – Reihenfolge bleibt in der Session konstant
+const jokes = shuffle(jokesData);
 const first = jokes[0];
 
 export default function App() {

@@ -1,6 +1,13 @@
+import { Routes, Route, Navigate } from 'react-router-dom';
 import SwipeStack from './components/SwipeStack';
 import jokes from './data/jokes.json';
 import './App.css';
+
+function padId(id) {
+  return String(id).padStart(4, '0');
+}
+
+const first = jokes[0];
 
 export default function App() {
   return (
@@ -14,7 +21,10 @@ export default function App() {
       </header>
 
       <main className="main">
-        <SwipeStack jokes={jokes} />
+        <Routes>
+          <Route path="/:id/:slug" element={<SwipeStack jokes={jokes} />} />
+          <Route path="*" element={<Navigate to={`/${padId(first.id)}/${first.slug}`} replace />} />
+        </Routes>
       </main>
 
       <footer className="footer">

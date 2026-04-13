@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import JokeCard from './JokeCard';
 
 const GRADIENTS = [
@@ -19,15 +20,29 @@ const GRADIENTS = [
   ['#89f7fe', '#66a6ff'],
 ];
 
+function padId(id) {
+  return String(id).padStart(4, '0');
+}
+
 export default function SwipeStack({ jokes }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const initialIndex = Math.max(0, jokes.findIndex(j => j.id === parseInt(id, 10)));
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
   const total = jokes.length;
   const canGoLeft = currentIndex < total - 1;
   const canGoRight = currentIndex > 0;
 
-  const goNext = () => { if (canGoLeft) setCurrentIndex(i => i + 1); };
-  const goPrev = () => { if (canGoRight) setCurrentIndex(i => i - 1); };
+  const goTo = (index) => {
+    setCurrentIndex(index);
+    const joke = jokes[index];
+    navigate(`/${padId(joke.id)}/${joke.slug}`, { replace: true });
+  };
+
+  const goNext = () => { if (canGoLeft) goTo(currentIndex + 1); };
+  const goPrev = () => { if (canGoRight) goTo(currentIndex - 1); };
 
   return (
     <div className="swipe-stack">
@@ -37,7 +52,6 @@ export default function SwipeStack({ jokes }) {
       <div className="progress-label">{currentIndex + 1} / {total}</div>
 
       <div className="cards-area">
-        {/* Hintere Karte – nächster Witz, liegt direkt dahinter */}
         {currentIndex + 1 < total && (
           <JokeCard
             key={currentIndex + 1}
@@ -50,8 +64,6 @@ export default function SwipeStack({ jokes }) {
             canGoRight={canGoRight}
           />
         )}
-
-        {/* Vordere Karte – aktueller Witz, swipebar */}
         <JokeCard
           key={currentIndex}
           joke={jokes[currentIndex]}

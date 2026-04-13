@@ -1,6 +1,10 @@
 import { useRef, useEffect } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 
+function padId(id) {
+  return String(id).padStart(4, '0');
+}
+
 export default function JokeCard({ joke, isTop, colors, onSwipeLeft, onSwipeRight, canGoLeft, canGoRight }) {
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-220, 220], [-22, 22]);
@@ -9,7 +13,6 @@ export default function JokeCard({ joke, isTop, colors, onSwipeLeft, onSwipeRigh
 
   const swiped = useRef(false);
 
-  // Wenn Karte wieder in den Hintergrund wandert: Position und Status zurücksetzen
   useEffect(() => {
     if (!isTop) {
       x.set(0);
@@ -63,6 +66,9 @@ export default function JokeCard({ joke, isTop, colors, onSwipeLeft, onSwipeRigh
       onDragEnd={isTop ? handleDragEnd : undefined}
       whileTap={isTop ? { cursor: 'grabbing' } : undefined}
     >
+      {/* ID oben rechts */}
+      <div className="joke-id">#{padId(joke.id)}</div>
+
       {isTop && (
         <>
           <motion.div className="swipe-indicator indicator-left" style={{ opacity: leftOpacity }}>

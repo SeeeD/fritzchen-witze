@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import JokeCard from './JokeCard';
@@ -47,8 +47,16 @@ export default function SwipeStack({ jokes }) {
   const { slug } = useParams();
   const navigate = useNavigate();
 
-  const initialIndex = slug ? Math.max(0, jokes.findIndex(j => j.slug === slug)) : 0;
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const indexForSlug = (s) => s ? Math.max(0, jokes.findIndex(j => j.slug === s)) : 0;
+  const [currentIndex, setCurrentIndex] = useState(() => indexForSlug(slug));
+
+  useEffect(() => {
+    const index = indexForSlug(slug);
+    if (index !== currentIndex) {
+      topX.set(0);
+      setCurrentIndex(index);
+    }
+  }, [slug]);
 
   // Geteilter x-Wert der oberen Karte – steuert welche Hintergrundkarte sichtbar ist
   const topX = useMotionValue(0);

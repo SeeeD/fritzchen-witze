@@ -323,5 +323,505 @@
     "id": 65,
     "slug": "zeugnis-nicht-reich",
     "text": "Lehrer: \"Fritzchen, mit diesen Noten wirst du nie Arzt!\"\nFritzchen: \"Ich will auch gar kein Arzt werden.\"\nLehrer: \"Was denn?\"\nFritzchen: \"Reich.\""
+  },
+  {
+    "id": 66,
+    "slug": "biene-summt",
+    "text": "Lehrerin: \"Fritzchen, warum summt die Biene?\"\nFritzchen: \"Weil sie den Text nicht kennt.\""
+  },
+  {
+    "id": 67,
+    "slug": "ferien-kurze-reise",
+    "text": "Lehrer: \"Fritzchen, schreib einen Aufsatz über deine Ferien!\"\nFritzchen gibt nach fünf Minuten ab.\nLehrer: \"Das ist nur ein Satz!\"\nFritzchen: \"Es war eine kurze Reise.\""
+  },
+  {
+    "id": 68,
+    "slug": "krank-mit-schule",
+    "text": "Fritzchen zum Arzt: \"Doktor, ich bin krank.\"\nArzt: \"Haben Sie Fieber?\"\nFritzchen: \"Nein.\"\nArzt: \"Schmerzen?\"\nFritzchen: \"Nein.\"\nArzt: \"Was haben Sie denn?\"\nFritzchen: \"Schule.\""
+  },
+  {
+    "id": 69,
+    "slug": "nil-unbekannte-gegend",
+    "text": "Lehrer: \"Fritzchen, wo entspringt der Nil?\"\nFritzchen: \"In einer Gegend, in der ich noch nie war, Herr Lehrer.\""
+  },
+  {
+    "id": 70,
+    "slug": "taschengeld-nachhilfe",
+    "text": "Papa: \"Fritzchen, du bekommst kein Taschengeld mehr, bis du bessere Noten hast.\"\nFritzchen: \"Dann kann ich mir die Nachhilfestunden nicht leisten.\""
+  },
+  {
+    "id": 71,
+    "slug": "fledermaus-tagsschlafen",
+    "text": "Lehrerin: \"Fritzchen, was weißt du über Fledermäuse?\"\nFritzchen: \"Die schlafen tagsüber. Ich auch – wir haben viel gemeinsam.\""
+  },
+  {
+    "id": 72,
+    "slug": "papas-geburtstag-naechstesmal",
+    "text": "Mutter: \"Fritzchen, heute ist Papas Geburtstag. Was wünschst du ihm?\"\nFritzchen: \"Dass er nächstes Jahr auch einen hat.\""
+  },
+  {
+    "id": 73,
+    "slug": "aggregatzustaende-schulpflichtig",
+    "text": "Lehrerin: \"Fritzchen, welche drei Aggregatzustände gibt es?\"\nFritzchen: \"Wach, müde und schulpflichtig.\""
+  },
+  {
+    "id": 74,
+    "slug": "noten-konsequent",
+    "text": "Mutter: \"Fritzchen, dein Zeugnis ist eine Katastrophe!\"\nFritzchen: \"Wenigstens bin ich konsequent – da steht überall eine Fünf.\""
+  },
+  {
+    "id": 75,
+    "slug": "englisch-das-bin-ich",
+    "text": "Englischlehrerin: \"Fritzchen, übersetze bitte: 'He doesn't want to go to school.'\"\nFritzchen: \"Das bin ich, Frau Lehrerin.\""
+  },
+  {
+    "id": 76,
+    "slug": "kuehe-nehmen",
+    "text": "Lehrer: \"Fritzchen, warum geben Kühe Milch?\"\nFritzchen: \"Die geben sie nicht – man nimmt sie einfach.\""
+  },
+  {
+    "id": 77,
+    "slug": "elternabend-lebendig",
+    "text": "Mutter kommt vom Elternabend zurück.\nFritzchen: \"Und? Was hat der Lehrer gesagt?\"\nMutter: \"Du hast einen sehr lebhaften Geist.\"\nFritzchen: \"Das ist nett. Was hat er wirklich gesagt?\""
+  },
+  {
+    "id": 78,
+    "slug": "klavier-anfaenger",
+    "text": "Musiklehrer: \"Fritzchen, du spielst Klavier wie ein Anfänger!\"\nFritzchen: \"Ich BIN ein Anfänger.\"\nLehrer: \"Seit drei Jahren?\""
+  },
+  {
+    "id": 79,
+    "slug": "gross-werden",
+    "text": "Lehrer: \"Fritzchen, was willst du werden, wenn du groß bist?\"\nFritzchen: \"Groß.\""
+  },
+  {
+    "id": 80,
+    "slug": "schwerkraft-aufstehen",
+    "text": "Physiklehrer: \"Fritzchen, was ist Schwerkraft?\"\nFritzchen: \"Das, woran ich jeden Morgen scheitere, wenn ich aufstehen soll.\""
+  },
+  {
+    "id": 81,
+    "slug": "satz-passiv",
+    "text": "Lehrer: \"Fritzchen, bilden Sie einen Satz im Passiv!\"\nFritzchen: \"Das Essen wird von mir nicht gegessen.\"\nLehrer: \"Welches Essen?\"\nFritzchen: \"Das von meiner Mutter.\""
+  },
+  {
+    "id": 82,
+    "slug": "himmel-montags-grau",
+    "text": "Kunstlehrerin: \"Fritzchen, mit welcher Farbe malst du den Himmel?\"\nFritzchen: \"Montags grau.\""
+  },
+  {
+    "id": 83,
+    "slug": "hund-bewertet-hausaufgaben",
+    "text": "Mutter: \"Fritzchen, hat der Hund deine Hausaufgaben gefressen?\"\nFritzchen: \"Nein – er hat sie bewertet. Drei von zehn Punkten.\""
+  },
+  {
+    "id": 84,
+    "slug": "gefaehrlichstes-tier-lehrer",
+    "text": "Lehrer: \"Fritzchen, was ist das gefährlichste Tier der Welt?\"\nFritzchen: \"Der Lehrer kurz vor der Klassenarbeit.\""
+  },
+  {
+    "id": 85,
+    "slug": "klassenarbeit-fertig",
+    "text": "Fritzchen gibt die Klassenarbeit nach fünf Minuten ab.\nLehrer: \"Wie? Schon fertig?\"\nFritzchen: \"Nein. Aber ich kann nicht mehr.\""
+  },
+  {
+    "id": 86,
+    "slug": "einmaleins-hinten-im-heft",
+    "text": "Lehrer: \"Fritzchen, was ist 9 mal 9?\"\nFritzchen: \"81.\"\nLehrer: \"Sehr gut! Wie haben Sie das so schnell gewusst?\"\nFritzchen: \"Das ist kein Geheimnis – das steht hinten im Heft.\""
+  },
+  {
+    "id": 87,
+    "slug": "mama-bin-ich-klug",
+    "text": "Fritzchen: \"Mama, bin ich klug?\"\nMutter: \"Natürlich, mein Schatz.\"\nFritzchen: \"Und warum ist der Lehrer dann immer überrascht?\""
+  },
+  {
+    "id": 88,
+    "slug": "verb-schlafen",
+    "text": "Lehrerin: \"Fritzchen, was ist ein Verb? Gib ein Beispiel!\"\nFritzchen: \"'Schlafen' – Fritzchen schläft im Unterricht.\""
+  },
+  {
+    "id": 89,
+    "slug": "ferien-speisekarte",
+    "text": "Lehrer: \"Fritzchen, was hast du in den Ferien gelesen?\"\nFritzchen: \"Die Speisekarte.\""
+  },
+  {
+    "id": 90,
+    "slug": "wueste-klimaanlage",
+    "text": "Lehrer: \"Warum ist es in der Wüste so heiß, Fritzchen?\"\nFritzchen: \"Weil da keine Klimaanlage ist.\""
+  },
+  {
+    "id": 91,
+    "slug": "gefehlt-vermisst",
+    "text": "Lehrer: \"Fritzchen, gestern haben Sie gefehlt!\"\nFritzchen: \"Ja – haben Sie mich vermisst?\""
+  },
+  {
+    "id": 92,
+    "slug": "geheimnis-schule",
+    "text": "Fritzchen: \"Mama, darf ich ein Geheimnis haben?\"\nMutter: \"Natürlich.\"\nFritzchen: \"Gut – dann sag ich dir nicht, was ich in der Schule gemacht habe.\""
+  },
+  {
+    "id": 93,
+    "slug": "handschrift-unleserlich",
+    "text": "Lehrerin: \"Fritzchen, deine Handschrift ist unleserlich!\"\nFritzchen: \"Danke – so kann die Lehrerin meine Fehler nicht lesen.\""
+  },
+  {
+    "id": 94,
+    "slug": "hausaufgaben-hund-konsequent",
+    "text": "Fritzchen: \"Herr Lehrer, mein Hund hat meine Hausaufgaben gefressen!\"\nLehrer: \"Das sagst du jedes Mal.\"\nFritzchen: \"Er ist sehr konsequent.\""
+  },
+  {
+    "id": 95,
+    "slug": "geld-alles-kostet",
+    "text": "Fritzchen: \"Papa, was ist Geld?\"\nPapa: \"Fritzchen, Geld ist nicht alles.\"\nFritzchen: \"Ich weiß. Aber alles kostet Geld.\""
+  },
+  {
+    "id": 96,
+    "slug": "regen-kein-dach",
+    "text": "Lehrer: \"Fritzchen, wie entsteht Regen?\"\nFritzchen: \"Immer dann, wenn ich kein Dach hab.\""
+  },
+  {
+    "id": 97,
+    "slug": "diktat-fehler-schaemen",
+    "text": "Lehrer gibt ein Diktat zurück.\nLehrer: \"Fritzchen, 15 Fehler. Ich schäme mich für Sie!\"\nFritzchen: \"Wegen 15 Fehlern? Ich schon wegen dreien.\""
+  },
+  {
+    "id": 98,
+    "slug": "sonne-zu-fuss",
+    "text": "Lehrerin: \"Fritzchen, wie weit ist die Sonne von der Erde entfernt?\"\nFritzchen: \"Weit genug, dass ich sie nicht zu Fuß erreiche.\""
+  },
+  {
+    "id": 99,
+    "slug": "letzter-erster-von-hinten",
+    "text": "Papa: \"Fritzchen, mit diesen Noten bist du der Letzte in deiner Klasse!\"\nFritzchen: \"Zumindest bin ich von hinten der Erste.\""
+  },
+  {
+    "id": 100,
+    "slug": "pille-lernen",
+    "text": "Arzt: \"Fritzchen, nimm morgens eine rote und abends eine blaue Pille.\"\nFritzchen: \"Warum?\"\nArzt: \"Die rote macht dich wach, die blaue lässt dich schlafen.\"\nFritzchen: \"Wann soll ich dann lernen?\""
+  },
+  {
+    "id": 101,
+    "slug": "schlafwandeln-hunger",
+    "text": "Mutter: \"Fritzchen, ich glaube, du schlafwandelst.\"\nFritzchen: \"Wieso?\"\nMutter: \"Heute Nacht warst du in der Küche und hast Kuchen gegessen.\"\nFritzchen: \"Das war kein Schlafwandeln. Das war Hunger.\""
+  },
+  {
+    "id": 102,
+    "slug": "internet-mama-recht",
+    "text": "Lehrer: \"Fritzchen, erkläre das Internet!\"\nFritzchen: \"Ein Ort, wo alle immer recht haben – außer meiner Mutter.\""
+  },
+  {
+    "id": 103,
+    "slug": "wahrheit-kuchen-schrecklich",
+    "text": "Mutter: \"Fritzchen, sag immer die Wahrheit!\"\nFritzchen: \"Mama, dein Kuchen schmeckt schrecklich.\"\nMutter: \"...\"\nFritzchen: \"Das war die Wahrheit.\""
+  },
+  {
+    "id": 104,
+    "slug": "busfahrer-losfahren",
+    "text": "Fritzchen zum Busfahrer: \"Hält dieser Bus am Bahnhof?\"\nBusfahrer: \"Natürlich.\"\nFritzchen: \"Und wer sagt ihm, dass er wieder losfahren soll?\""
+  },
+  {
+    "id": 105,
+    "slug": "opa-pfennig-ersparnisse",
+    "text": "Opa: \"Fritzchen, ich habe früher für ein Brot einen Pfennig bezahlt.\"\nFritzchen: \"Und was hast du mit den ganzen Ersparnissen gemacht?\""
+  },
+  {
+    "id": 106,
+    "slug": "uhrzeit-zu-frueh",
+    "text": "Lehrer: \"Fritzchen, wie spät ist es?\"\nFritzchen: \"Ich weiß es nicht genau – aber es ist auf jeden Fall zu früh für die Schule.\""
+  },
+  {
+    "id": 107,
+    "slug": "sport-youtube",
+    "text": "Sportlehrer: \"Fritzchen, wie oft hast du diese Woche geübt?\"\nFritzchen: \"Ich hab auf YouTube zugeschaut. Das ist effizienter.\""
+  },
+  {
+    "id": 108,
+    "slug": "zeugnis-witz",
+    "text": "Lehrer: \"Fritzchen, erzähl einen Witz!\"\nFritzchen: \"Mein Zeugnis.\"\nLehrer: \"...\""
+  },
+  {
+    "id": 109,
+    "slug": "hausaufgaben-bis-schulzeit-ende",
+    "text": "Mutter: \"Fritzchen, wie lange brauchst du noch für deine Hausaufgaben?\"\nFritzchen: \"Bis zum Ende der Schulzeit.\""
+  },
+  {
+    "id": 110,
+    "slug": "advent-countdown",
+    "text": "Mutter: \"Fritzchen, wofür sind die vier Adventskerzen?\"\nFritzchen: \"Damit man den Countdown bis zu den Geschenken im Dunkeln sehen kann.\""
+  },
+  {
+    "id": 111,
+    "slug": "eltern-wahnsinnig-wegen-mir",
+    "text": "Fritzchen: \"Mama, streiten du und Papa wegen mir?\"\nMutter: \"Nein, warum?\"\nFritzchen: \"Papa sagt immer 'Das Kind macht mich wahnsinnig' – und du sagst das auch.\""
+  },
+  {
+    "id": 112,
+    "slug": "mathe-papa-eigene-aufgaben",
+    "text": "Fritzchen: \"Papa, was ist 15 geteilt durch 3?\"\nPapa: \"5.\"\nFritzchen: \"Und 3 geteilt durch 15?\"\nPapa: \"0,2.\"\nFritzchen: \"Danke. Die Lehrerin hat gesagt, ich soll meine Aufgaben selbst lösen.\""
+  },
+  {
+    "id": 113,
+    "slug": "papagei-hat-recht",
+    "text": "Fritzchen: \"Papa, können Tiere sprechen?\"\nPapa: \"Nein.\"\nFritzchen: \"Aber der Papagei von Oma sagt 'Fritzchen ist blöd'.\"\nPapa: \"Er hat recht.\""
+  },
+  {
+    "id": 114,
+    "slug": "gedicht-enttaeuschend",
+    "text": "Lehrer: \"Fritzchen, tragen Sie ein Gedicht vor!\"\nFritzchen: \"Ich hab keins gelernt.\"\nLehrer: \"Das ist enttäuschend.\"\nFritzchen: \"Das ist auch ein Gefühl, Herr Lehrer.\""
+  },
+  {
+    "id": 115,
+    "slug": "konjunktiv-wunsch",
+    "text": "Lehrer: \"Fritzchen, bilden Sie einen Satz im Konjunktiv II!\"\nFritzchen: \"Wenn ich keine Schule hätte, wäre ich glücklich.\"\nLehrer: \"Sehr gut!\"\nFritzchen: \"Das war kein Satz. Das war ein Wunsch.\""
+  },
+  {
+    "id": 116,
+    "slug": "sofa-aufraumen",
+    "text": "Mutter: \"Fritzchen, dein Hund hat das Sofa zerfetzt!\"\nFritzchen: \"Gut – dann muss ich es nicht mehr aufräumen.\""
+  },
+  {
+    "id": 117,
+    "slug": "spende-fuer-uns",
+    "text": "Papa: \"Fritzchen, ich spende jeden Monat für die Armen.\"\nFritzchen: \"Und wer spendet für uns?\""
+  },
+  {
+    "id": 118,
+    "slug": "haende-sahen-sauber-aus",
+    "text": "Mutter: \"Fritzchen, hast du dir die Hände gewaschen?\"\nFritzchen: \"Ich hab sie gezeigt – sie sahen sauber aus.\""
+  },
+  {
+    "id": 119,
+    "slug": "luegen-vorteil",
+    "text": "Vater: \"Fritzchen, einem Lügner glaubt man nie!\"\nFritzchen: \"Super – dann muss ich dir nicht mehr erzählen, was ich in der Schule gemacht habe.\""
+  },
+  {
+    "id": 120,
+    "slug": "wlan-auf-dem-baum",
+    "text": "Fritzchen klettert auf einen Baum.\nMutter ruft von unten: \"Komm sofort runter!\"\nFritzchen: \"Gleich – ich teste noch den WLAN-Empfang.\""
+  },
+  {
+    "id": 121,
+    "slug": "aufmerksamkeit-nicht-interessant",
+    "text": "Lehrer: \"Fritzchen, passen Sie bitte auf!\"\nFritzchen: \"Ich passe auf. Es passiert nur nichts Interessantes.\""
+  },
+  {
+    "id": 122,
+    "slug": "virus-bakterie-schulfrei",
+    "text": "Lehrerin: \"Fritzchen, was ist der Unterschied zwischen einem Virus und einer Bakterie?\"\nFritzchen: \"Beide haben mir schon mal eine Woche schulfrei verschafft, Frau Lehrerin.\""
+  },
+  {
+    "id": 123,
+    "slug": "fliege-suppe-trinkt",
+    "text": "Fritzchen im Restaurant: \"In meiner Suppe schwimmt eine Fliege!\"\nKellner: \"Kann sie denn schwimmen?\"\nFritzchen: \"Ja – aber sie trinkt zu viel.\""
+  },
+  {
+    "id": 124,
+    "slug": "aufstehen-guter-grund",
+    "text": "Mutter: \"Fritzchen, steh auf, du kommst zu spät zur Schule!\"\nFritzchen: \"Muss ich wirklich?\"\nMutter: \"Ja!\"\nFritzchen: \"Gib mir einen guten Grund.\"\nMutter: \"Du bist neun Jahre alt.\""
+  },
+  {
+    "id": 125,
+    "slug": "arzt-schlafen-in-der-schule",
+    "text": "Arzt: \"Fritzchen, wie viel schläfst du pro Nacht?\"\nFritzchen: \"In der Schule auch ein bisschen.\""
+  },
+  {
+    "id": 126,
+    "slug": "feiertag-schultag-feiern",
+    "text": "Fritzchen: \"Mama, warum haben wir morgen schulfrei?\"\nMutter: \"Es ist ein Feiertag.\"\nFritzchen: \"Wer feiert den?\"\nMutter: \"Alle.\"\nFritzchen: \"Warum feiern wir nie die Schultage?\""
+  },
+  {
+    "id": 127,
+    "slug": "vogel-kann-nicht-fliegen",
+    "text": "Lehrer: \"Fritzchen, welcher Vogel kann nicht fliegen?\"\nFritzchen: \"Mein Papierflieger.\""
+  },
+  {
+    "id": 128,
+    "slug": "faul-auf-englisch",
+    "text": "Englischlehrerin: \"Fritzchen, was bedeutet 'industrious'?\"\nFritzchen: \"Weiß ich nicht genau. Aber 'lazy' kenn ich.\""
+  },
+  {
+    "id": 129,
+    "slug": "rad-erfunden",
+    "text": "Lehrer: \"Fritzchen, wer hat das Rad erfunden?\"\nFritzchen: \"Jemand, dem das Laufen zu anstrengend war.\""
+  },
+  {
+    "id": 130,
+    "slug": "telefon-ohne-handy",
+    "text": "Lehrerin: \"Fritzchen, wer hat das Telefon erfunden?\"\nFritzchen: \"Jemand, der kein Handy hatte.\""
+  },
+  {
+    "id": 131,
+    "slug": "licht-schneller-als-schall",
+    "text": "Physiklehrer: \"Fritzchen, was ist schneller – Licht oder Schall?\"\nFritzchen: \"Licht. Deshalb sehe ich den Blitz vor dem Donner – und deshalb sehe ich die Lehrerin, bevor ich sie höre.\""
+  },
+  {
+    "id": 132,
+    "slug": "ernte-schlechte-noten",
+    "text": "Lehrer: \"Fritzchen, was erntet man im Herbst?\"\nFritzchen: \"Schlechte Noten – die sät man schon im September.\""
+  },
+  {
+    "id": 133,
+    "slug": "pruefung-ich-weiss-dass-ichs-nicht-weiss",
+    "text": "Fritzchen in der Prüfung: \"Herr Lehrer, ich weiß die Antwort nicht.\"\nLehrer: \"Dann schreiben Sie wenigstens das, was Sie wissen!\"\nFritzchen schreibt: \"Ich weiß, dass ich es nicht weiß.\""
+  },
+  {
+    "id": 134,
+    "slug": "schwimmen-trockener",
+    "text": "Schwimmlehrer: \"Fritzchen, warum springst du nicht ins Wasser?\"\nFritzchen: \"Ich warte, bis es trockener wird.\""
+  },
+  {
+    "id": 135,
+    "slug": "papa-wahrheit-aufgehoert",
+    "text": "Papa: \"Fritzchen, ich habe in deinem Alter immer die Wahrheit gesagt.\"\nFritzchen: \"Und wann hast du damit aufgehört?\""
+  },
+  {
+    "id": 136,
+    "slug": "aufsatz-papa-geweint",
+    "text": "Fritzchen: \"Papa, im Aufsatz hab ich geschrieben, du bist der lustigste Mensch der Welt.\"\nPapa: \"Das ist schön! Was hat der Lehrer gesagt?\"\nFritzchen: \"Er hat geweint.\""
+  },
+  {
+    "id": 137,
+    "slug": "streiche-ein-buch",
+    "text": "Mutter: \"Fritzchen, ich hab all deine Streiche aufgeschrieben!\"\nFritzchen: \"Wird das ein Buch?\""
+  },
+  {
+    "id": 138,
+    "slug": "spaghetti-esse-nicht-auf",
+    "text": "Mutter: \"Fritzchen, iss deine Spaghetti!\"\nFritzchen: \"Ich esse sie. Ich esse sie nur nicht auf.\""
+  },
+  {
+    "id": 139,
+    "slug": "lieblingsgeschichte-bibel",
+    "text": "Religionslehrer: \"Fritzchen, was ist deine Lieblingsgeschichte aus der Bibel?\"\nFritzchen: \"Die, in der alle sechs Tage frei haben.\""
+  },
+  {
+    "id": 140,
+    "slug": "unterrichtsstunde-zu-ende",
+    "text": "Lehrer: \"Fritzchen, wann ist die Unterrichtsstunde zu Ende?\"\nFritzchen: \"Sobald Sie aufhören zu reden.\""
+  },
+  {
+    "id": 141,
+    "slug": "hund-wird-lehrer",
+    "text": "Mutter: \"Fritzchen, hast du den Hund erzogen?\"\nFritzchen: \"Nein – er hört nicht zu. Er wird Lehrer.\""
+  },
+  {
+    "id": 142,
+    "slug": "ueben-nichts-tun",
+    "text": "Fritzchen: \"Mama, die Lehrerin hat gesagt, ich soll zuhause üben.\"\nMutter: \"Und? Was übst du?\"\nFritzchen: \"Nichts. Ich übe, nichts zu tun.\""
+  },
+  {
+    "id": 143,
+    "slug": "brille-fuenf-an-der-tafel",
+    "text": "Fritzchen: \"Mama, ich glaube, ich brauche eine Brille.\"\nMutter: \"Wieso?\"\nFritzchen: \"Ich sehe immer eine Fünf an der Tafel – obwohl der Lehrer eine Eins schreibt.\""
+  },
+  {
+    "id": 144,
+    "slug": "schlau-nicht-lernen",
+    "text": "Lehrer: \"Fritzchen, warum bist du so schlau?\"\nFritzchen: \"Weil ich nicht so viel Zeit mit Lernen verschwende.\""
+  },
+  {
+    "id": 145,
+    "slug": "fisch-aufpassen",
+    "text": "Lehrer: \"Fritzchen, warum lebt der Fisch im Wasser?\"\nFritzchen: \"Weil an Land alle auf ihn aufpassen würden.\""
+  },
+  {
+    "id": 146,
+    "slug": "sonne-geht-zu-frueh-auf",
+    "text": "Lehrer: \"Fritzchen, wo geht die Sonne auf?\"\nFritzchen: \"Zu früh.\""
+  },
+  {
+    "id": 147,
+    "slug": "zeugnis-unterschrift-echt",
+    "text": "Fritzchen bringt sein Zeugnis.\nVater: \"Das unterschreibe ich nicht!\"\nFritzchen: \"Das ist in Ordnung – der Lehrer hat gesagt, die Unterschrift muss echt sein.\""
+  },
+  {
+    "id": 148,
+    "slug": "oktopus-acht-arme",
+    "text": "Fritzchen: \"Papa, warum hat ein Oktopus acht Arme?\"\nPapa: \"Das hat die Natur so vorgesehen.\"\nFritzchen: \"Zum Hausaufgaben machen wäre das praktisch.\""
+  },
+  {
+    "id": 149,
+    "slug": "sportlehrer-nicht-demeuetigend",
+    "text": "Sportlehrer: \"Fritzchen, warum läufst du nicht mit?\"\nFritzchen: \"Ich will die anderen nicht demütigen.\""
+  },
+  {
+    "id": 150,
+    "slug": "berufswunsch-millionaer",
+    "text": "Fritzchen schreibt als Berufswunsch im Aufsatz: 'Millionär'.\nLehrer: \"Das ist kein Beruf!\"\nFritzchen: \"Für meinen Papa auch nicht – aber er versucht es trotzdem.\""
+  },
+  {
+    "id": 151,
+    "slug": "tante-schokolade",
+    "text": "Tante: \"Fritzchen, magst du mich gern?\"\nFritzchen: \"Ja – du bringst immer Schokolade mit.\"\nTante: \"Und wenn ich keine bringe?\"\nFritzchen: \"Dann mag ich dich trotzdem – aber weniger.\""
+  },
+  {
+    "id": 152,
+    "slug": "feueralarm-schulschluss",
+    "text": "Fritzchen kommt aufgeregt nach Hause.\nMutter: \"Was ist passiert?\"\nFritzchen: \"Heute hat's in der Schule geklingelt und alle mussten raus!\"\nMutter: \"Feueralarm?\"\nFritzchen: \"Nein – Schulschluss.\""
+  },
+  {
+    "id": 153,
+    "slug": "faulheit-talent",
+    "text": "Lehrer: \"Fritzchen, Sie haben echtes Talent – für Faulheit.\"\nFritzchen: \"Danke, Herr Lehrer – ich übe sehr viel.\""
+  },
+  {
+    "id": 154,
+    "slug": "kekse-koennen-nicht-zaehlen",
+    "text": "Mutter: \"Fritzchen, hast du die Kekse gegessen?\"\nFritzchen: \"Nein.\"\nMutter: \"Ich hatte genau zwölf. Jetzt sind's noch neun.\"\nFritzchen: \"Vielleicht können die Kekse nicht zählen.\""
+  },
+  {
+    "id": 155,
+    "slug": "spicken-nachbar-probleme",
+    "text": "Lehrer: \"Fritzchen, haben Sie gespickt?\"\nFritzchen: \"Nein – ich hab nur geguckt, ob mein Nachbar auch Probleme hat.\""
+  },
+  {
+    "id": 156,
+    "slug": "weihnachtsmann-whatsapp",
+    "text": "Fritzchen: \"Mama, schreibe ich dem Weihnachtsmann auf Papier oder reicht eine WhatsApp?\""
+  },
+  {
+    "id": 157,
+    "slug": "china-im-schrank",
+    "text": "Lehrer: \"Fritzchen, wo liegt China?\"\nFritzchen: \"Im Schrank meiner Mutter, Herr Lehrer.\""
+  },
+  {
+    "id": 158,
+    "slug": "taschenrechner-knopfdruecker",
+    "text": "Lehrer: \"Fritzchen, kein Taschenrechner beim Test!\"\nFritzchen: \"Aber der Taschenrechner braucht mich – ohne mich drückt er keine Knöpfe.\""
+  },
+  {
+    "id": 159,
+    "slug": "wochenende-planen",
+    "text": "Fritzchen: \"Papa, wann ist endlich Wochenende?\"\nPapa: \"In drei Tagen.\"\nFritzchen: \"Und wann ist dann wieder Wochenende?\"\nPapa: \"Fritzchen...\"\nFritzchen: \"Ich plane nur voraus.\""
+  },
+  {
+    "id": 160,
+    "slug": "nachbar-landschaftsgestaltung",
+    "text": "Nachbar: \"Fritzchen, du hast meinen Garten verwüstet!\"\nFritzchen: \"Das ist kein Verwüsten – das ist Landschaftsgestaltung.\""
+  },
+  {
+    "id": 161,
+    "slug": "donau-kurzsichtig",
+    "text": "Lehrer: \"Fritzchen, warum heißt es 'An der schönen blauen Donau', wenn der Fluss gar nicht blau ist?\"\nFritzchen: \"Vielleicht war der Komponist kurzsichtig.\""
+  },
+  {
+    "id": 162,
+    "slug": "spiegel-andere-leute",
+    "text": "Mutter: \"Fritzchen, schau dir an, wie du aussiehst!\"\nFritzchen: \"Ich schau mir lieber andere Leute an.\""
+  },
+  {
+    "id": 163,
+    "slug": "busfahrer-kurve",
+    "text": "Busfahrer: \"Fritzchen, steh in der Kurve nicht auf!\"\nFritzchen: \"Ich bin nicht aufgestanden – der Bus hat mich hochgeworfen.\""
+  },
+  {
+    "id": 164,
+    "slug": "zahnarzt-eis",
+    "text": "Fritzchen zur Mutter: \"Darf ich ein Eis?\"\nMutter: \"Du warst doch gerade beim Zahnarzt!\"\nFritzchen: \"Eben deshalb – er hat gesagt, ich soll regelmäßig kommen.\""
+  },
+  {
+    "id": 165,
+    "slug": "zeugnis-hinterseite",
+    "text": "Vater liest Fritzchens Zeugnis und dreht es um.\nFritzchen: \"Was suchst du?\"\nVater: \"Ob auf der Rückseite bessere Noten stehen.\"\nFritzchen: \"Da steht nur: 'Bitte wenden'. Hab ich auch schon probiert.\""
   }
 ]

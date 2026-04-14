@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <script>
     // GitHub Pages SPA-Trick: Pfad als Query-Parameter weiterleiten
-    // pathSegmentsToKeep = 1 solange die Seite unter /fritzchen-witze/ läuft.
-    // Auf Custom Domain (root) auf 0 ändern.
-    var pathSegmentsToKeep = 1;
+    // pathSegmentsToKeep = 0 bei Custom Domain (root).
+    var pathSegmentsToKeep = 0;
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +

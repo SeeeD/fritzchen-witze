@@ -65,6 +65,15 @@ export default function SwipeStack({ jokes }) {
     }
   }, [slug]);
 
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'ArrowRight') goNext();
+      if (e.key === 'ArrowLeft') goPrev();
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [currentIndex]);
+
   const total = jokes.length;
   const canGoLeft = currentIndex < total - 1;
   const canGoRight = currentIndex > 0;

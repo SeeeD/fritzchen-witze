@@ -1,11 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SwipeStack from './components/SwipeStack';
+import Impressum from './components/Impressum';
 import jokesData from './data/jokes.json';
 import './App.css';
-
-function padId(id) {
-  return String(id).padStart(4, '0');
-}
 
 function shuffle(array) {
   const arr = [...array];
@@ -33,13 +31,16 @@ export default function App() {
 
       <main className="main">
         <Routes>
-          <Route path="/:id/:slug" element={<SwipeStack jokes={jokes} />} />
-          <Route path="*" element={<Navigate to={`/${padId(first.id)}/${first.slug}`} replace />} />
+          <Route path="/:slug" element={<SwipeStack jokes={jokes} />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="*" element={<Navigate to={`/${first.slug}`} replace />} />
         </Routes>
       </main>
 
       <footer className="footer">
         Made with 😂 &amp; viel Quatsch
+        <span className="footer-sep">·</span>
+        <Link to="/impressum" className="footer-link">Impressum</Link>
       </footer>
     </div>
   );

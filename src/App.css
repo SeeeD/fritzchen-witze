@@ -243,4 +243,82 @@
   color: #bbb;
   font-weight: 600;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-sep {
+  opacity: 0.5;
+}
+
+.footer-link {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ff6b6b;
+  text-decoration: underline;
+}
+
+/* ─── Impressum ──────────────────────────────────────── */
+.impressum {
+  width: 100%;
+  max-width: 560px;
+  padding: 8px 4px 24px;
+  color: #333;
+  overflow-y: auto;
+  max-height: calc(100svh - 160px);
+}
+
+.impressum-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ff6b6b;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.impressum-back:hover {
+  text-decoration: underline;
+}
+
+.impressum h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.8rem;
+  color: #2d2d2d;
+  margin-bottom: 20px;
+}
+
+.impressum h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.impressum section {
+  margin-bottom: 20px;
+}
+
+.impressum p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #555;
+}
+
+.impressum a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+.impressum a:hover {
+  text-decoration: underline;
 }

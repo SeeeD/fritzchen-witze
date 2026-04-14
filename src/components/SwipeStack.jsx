@@ -44,10 +44,10 @@ function BgCard({ joke, colors }) {
 }
 
 export default function SwipeStack({ jokes }) {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
 
-  const initialIndex = Math.max(0, jokes.findIndex(j => j.id === parseInt(id, 10)));
+  const initialIndex = Math.max(0, jokes.findIndex(j => j.slug === slug));
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
   // Geteilter x-Wert der oberen Karte – steuert welche Hintergrundkarte sichtbar ist
@@ -66,7 +66,7 @@ export default function SwipeStack({ jokes }) {
     topX.set(0); // synchron zurücksetzen bevor neue Karte rendert
     setCurrentIndex(index);
     const joke = jokes[index];
-    navigate(`/${padId(joke.id)}/${joke.slug}`, { replace: true });
+    navigate(`/${joke.slug}`, { replace: true });
   };
 
   const goNext = () => { if (canGoLeft) goTo(currentIndex + 1); };

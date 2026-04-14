@@ -61,7 +61,7 @@ export default function JokeCard({ joke, colors, sharedX, onSwipeLeft, onSwipeRi
 
       <a
         className="joke-share"
-        href={`https://wa.me/?text=${encodeURIComponent(joke.text + '\n\n' + window.location.origin + '/' + joke.slug)}`}
+        href={`https://wa.me/?text=${encodeURIComponent('😂 Dieser Fritzchen-Witz hat mich umgehauen – ich glaub du lachst auch:\n👉 ' + window.location.origin + '/' + joke.slug)}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Via WhatsApp teilen"

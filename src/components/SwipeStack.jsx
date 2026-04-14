@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import JokeCard from './JokeCard';
 
 const GRADIENTS = [
@@ -25,13 +25,14 @@ function padId(id) {
   return String(id).padStart(4, '0');
 }
 
-function BgCard({ joke, colors }) {
+function SideCard({ joke, colors, motionX }) {
   return (
-    <div
+    <motion.div
       className="joke-card"
       style={{
         background: `linear-gradient(145deg, ${colors[0]}, ${colors[1]})`,
-        transform: 'scale(0.93) translateY(16px)',
+        x: motionX,
+        zIndex: 5,
       }}
     >
       <div className="joke-id">#{padId(joke.id)}</div>
@@ -39,7 +40,7 @@ function BgCard({ joke, colors }) {
         <div className="joke-face">😂</div>
         <p className="joke-text">{joke.text}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -50,6 +51,12 @@ export default function SwipeStack({ jokes }) {
   const indexForSlug = (s) => s ? Math.max(0, jokes.findIndex(j => j.slug === s)) : 0;
   const [currentIndex, setCurrentIndex] = useState(() => indexForSlug(slug));
 
+  const topX = useMotionValue(0);
+  // Nächste Karte: immer window.innerWidth rechts von der aktuellen
+  const nextCardX = useTransform(topX, x => x + window.innerWidth);
+  // Vorherige Karte: immer window.innerWidth links von der aktuellen
+  const prevCardX = useTransform(topX, x => x - window.innerWidth);
+
   useEffect(() => {
     const index = indexForSlug(slug);
     if (index !== currentIndex) {
@@ -58,27 +65,28 @@ export default function SwipeStack({ jokes }) {
     }
   }, [slug]);
 
-  // Geteilter x-Wert der oberen Karte – steuert welche Hintergrundkarte sichtbar ist
-  const topX = useMotionValue(0);
-
-  // Nächste Karte: sichtbar by default, blendet aus wenn nach rechts gezogen wird
-  const nextBgOpacity = useTransform(topX, [0, 80], [1, 0]);
-  // Vorherige Karte: blendet ein wenn nach rechts gezogen wird
-  const prevBgOpacity = useTransform(topX, [0, 80], [0, 1]);
-
   const total = jokes.length;
   const canGoLeft = currentIndex < total - 1;
   const canGoRight = currentIndex > 0;
 
-  const goTo = (index) => {
-    topX.set(0); // synchron zurücksetzen bevor neue Karte rendert
-    setCurrentIndex(index);
-    const joke = jokes[index];
-    navigate(`/${joke.slug}`);
+  // Wird von JokeCard nach Drag-Threshold UND von Buttons aufgerufen
+  const goNext = async () => {
+    if (!canGoLeft) return;
+    const newIndex = currentIndex + 1;
+    await animate(topX, -window.innerWidth, { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] });
+    topX.set(0);
+    setCurrentIndex(newIndex);
+    navigate(`/${jokes[newIndex].slug}`);
   };
 
-  const goNext = () => { if (canGoLeft) goTo(currentIndex + 1); };
-  const goPrev = () => { if (canGoRight) goTo(currentIndex - 1); };
+  const goPrev = async () => {
+    if (!canGoRight) return;
+    const newIndex = currentIndex - 1;
+    await animate(topX, window.innerWidth, { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] });
+    topX.set(0);
+    setCurrentIndex(newIndex);
+    navigate(`/${jokes[newIndex].slug}`);
+  };
 
   return (
     <div className="swipe-stack">
@@ -88,27 +96,20 @@ export default function SwipeStack({ jokes }) {
       <div className="progress-label">{currentIndex + 1} / {total}</div>
 
       <div className="cards-area">
-        {/* Vorheriger Witz – erscheint beim Rechts-Wischen */}
         {canGoRight && (
-          <motion.div className="bg-card-wrapper" style={{ opacity: prevBgOpacity, zIndex: 4 }}>
-            <BgCard
-              joke={jokes[currentIndex - 1]}
-              colors={GRADIENTS[(currentIndex - 1) % GRADIENTS.length]}
-            />
-          </motion.div>
+          <SideCard
+            joke={jokes[currentIndex - 1]}
+            colors={GRADIENTS[(currentIndex - 1) % GRADIENTS.length]}
+            motionX={prevCardX}
+          />
         )}
-
-        {/* Nächster Witz – sichtbar by default, verschwindet beim Rechts-Wischen */}
         {canGoLeft && (
-          <motion.div className="bg-card-wrapper" style={{ opacity: nextBgOpacity, zIndex: 5 }}>
-            <BgCard
-              joke={jokes[currentIndex + 1]}
-              colors={GRADIENTS[(currentIndex + 1) % GRADIENTS.length]}
-            />
-          </motion.div>
+          <SideCard
+            joke={jokes[currentIndex + 1]}
+            colors={GRADIENTS[(currentIndex + 1) % GRADIENTS.length]}
+            motionX={nextCardX}
+          />
         )}
-
-        {/* Aktuelle Karte */}
         <JokeCard
           key={currentIndex}
           joke={jokes[currentIndex]}

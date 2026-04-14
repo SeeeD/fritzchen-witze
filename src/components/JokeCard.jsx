@@ -15,23 +15,15 @@ export default function JokeCard({ joke, colors, sharedX, onSwipeLeft, onSwipeRi
 
   const swiped = useRef(false);
 
-  const handleDragEnd = async (_, { offset, velocity }) => {
+  const handleDragEnd = (_, { offset, velocity }) => {
     if (swiped.current) return;
 
     if ((offset.x < -100 || velocity.x < -500) && canGoLeft) {
       swiped.current = true;
-      await animate(x, -(window.innerWidth + 300), {
-        duration: 0.35,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      });
-      onSwipeLeft();
+      onSwipeLeft(); // SwipeStack animiert topX bis -window.innerWidth
     } else if ((offset.x > 100 || velocity.x > 500) && canGoRight) {
       swiped.current = true;
-      await animate(x, window.innerWidth + 300, {
-        duration: 0.35,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      });
-      onSwipeRight();
+      onSwipeRight(); // SwipeStack animiert topX bis +window.innerWidth
     } else {
       animate(x, 0, { type: 'spring', stiffness: 380, damping: 28 });
     }
@@ -40,9 +32,7 @@ export default function JokeCard({ joke, colors, sharedX, onSwipeLeft, onSwipeRi
   return (
     <motion.div
       className="joke-card"
-      initial={{ scale: 0.92, opacity: 0 }}
-      animate={{ scale: 1, y: 0, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 280, damping: 28 }}
+      initial={false}
       style={{
         x,
         rotate,

@@ -66,7 +66,7 @@ export default function SwipeStack({ jokes }) {
     topX.set(0); // synchron zurücksetzen bevor neue Karte rendert
     setCurrentIndex(index);
     const joke = jokes[index];
-    navigate(`/${joke.slug}`, { replace: true });
+    navigate(`/${joke.slug}`);
   };
 
   const goNext = () => { if (canGoLeft) goTo(currentIndex + 1); };

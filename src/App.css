@@ -17,6 +17,12 @@
   flex-shrink: 0;
 }
 
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .logo {
   font-size: 40px;
   line-height: 1;

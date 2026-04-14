@@ -22,18 +22,21 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <div className="logo">🤣</div>
-        <h1 className="title">
-          Fritzchen<span className="title-accent">witze</span>
-        </h1>
-        <p className="subtitle">Der beste Schüler der Welt</p>
+        <Link to="/" className="header-link">
+          <div className="logo">🤣</div>
+          <h1 className="title">
+            Fritzchen<span className="title-accent">witze</span>
+          </h1>
+          <p className="subtitle">Der beste Schüler der Welt</p>
+        </Link>
       </header>
 
       <main className="main">
         <Routes>
+          <Route path="/" element={<SwipeStack jokes={jokes} />} />
           <Route path="/:slug" element={<SwipeStack jokes={jokes} />} />
           <Route path="/impressum" element={<Impressum />} />
-          <Route path="*" element={<Navigate to={`/${first.slug}`} replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
 

@@ -47,7 +47,7 @@ export default function SwipeStack({ jokes }) {
   const { slug } = useParams();
   const navigate = useNavigate();
 
-  const initialIndex = Math.max(0, jokes.findIndex(j => j.slug === slug));
+  const initialIndex = slug ? Math.max(0, jokes.findIndex(j => j.slug === slug)) : 0;
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
   // Geteilter x-Wert der oberen Karte – steuert welche Hintergrundkarte sichtbar ist

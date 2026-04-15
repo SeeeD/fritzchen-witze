@@ -66,6 +66,15 @@ export default function SwipeStack({ jokes }) {
   }, [slug]);
 
   useEffect(() => {
+    const joke = jokes[currentIndex];
+    if (!joke) return;
+    const firstLine = joke.text.split('\n')[0].trim();
+    const short = firstLine.length > 55 ? firstLine.slice(0, 52) + '…' : firstLine;
+    document.title = `${short} – Fritzchen-Witze`;
+    return () => { document.title = 'Fritzchen-Witze'; };
+  }, [currentIndex]);
+
+  useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'ArrowRight') goNext();
       if (e.key === 'ArrowLeft') goPrev();

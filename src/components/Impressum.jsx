@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Impressum() {
+  useEffect(() => {
+    document.title = 'Impressum – Fritzchen-Witze';
+    const meta = document.createElement('meta');
+    meta.name = 'robots';
+    meta.content = 'noindex, nofollow';
+    document.head.appendChild(meta);
+    return () => document.head.removeChild(meta);
+  }, []);
   return (
     <div className="impressum">
       <Link to="/" className="impressum-back">← Zurück</Link>

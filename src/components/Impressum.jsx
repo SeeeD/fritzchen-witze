@@ -4,10 +4,20 @@ import { Link } from 'react-router-dom';
 export default function Impressum() {
   useEffect(() => {
     document.title = 'Impressum – Fritzchen-Witze';
+
     const meta = document.createElement('meta');
     meta.name = 'robots';
     meta.content = 'noindex, nofollow';
     document.head.appendChild(meta);
+
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'canonical';
+      document.head.appendChild(link);
+    }
+    link.href = 'https://fritzchen-witze.de/impressum';
+
     return () => document.head.removeChild(meta);
   }, []);
   return (

@@ -66,6 +66,19 @@ export default function SwipeStack({ jokes }) {
   }, [slug]);
 
   useEffect(() => {
+    const url = slug
+      ? `https://fritzchen-witze.de/${slug}`
+      : 'https://fritzchen-witze.de/';
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'canonical';
+      document.head.appendChild(link);
+    }
+    link.href = url;
+  }, [slug]);
+
+  useEffect(() => {
     const joke = jokes[currentIndex];
     if (!joke) return;
     const firstLine = joke.text.split('\n')[0].trim();
